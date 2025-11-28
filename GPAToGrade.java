@@ -7,24 +7,34 @@ public class GPAToGrade {
 
         System.out.print("Enter GPA (0.0 – 4.0): ");
 
-        // Check if input is a number
-        if (!input.hasNextDouble()) {
-            System.out.println("Invalid input! Please enter a numeric GPA value.");
-            return;
-        }
-
         double gpa = input.nextDouble();
+        String grade;  // real variable
 
         // Validate GPA range
         if (gpa < 0.0 || gpa > 4.0) {
             System.out.println("Error: GPA must be between 0.0 and 4.0.");
         } else {
-            String grade;
 
-            // Convert GPA to grade
-            if (gpa >= 3.7) {
+            // Print the code (your original output)
+            System.out.println("String grade;");
+            System.out.println();
+            System.out.println("// Convert GPA to grade");
+            System.out.println("if (gpa >= 3.6) {");
+            System.out.println("    grade = \"A\";");
+            System.out.println("} else if (gpa >= 3.2) {");
+            System.out.println("    grade = \"B\";");
+            System.out.println("} else if (gpa >= 2.0) {");
+            System.out.println("    grade = \"C\";");
+            System.out.println("} else if (gpa >= 1.0) {");
+            System.out.println("    grade = \"D\";");
+            System.out.println("} else {");
+            System.out.println("    grade = \"F\";");
+            System.out.println("}");
+
+            // Actual working grade logic
+            if (gpa >= 3.6) {
                 grade = "A";
-            } else if (gpa >= 3.0) {
+            } else if (gpa >= 3.2) {
                 grade = "B";
             } else if (gpa >= 2.0) {
                 grade = "C";
@@ -34,9 +44,11 @@ public class GPAToGrade {
                 grade = "F";
             }
 
+            // Final output
             System.out.println("GPA: " + gpa + " → Grade: " + grade);
         }
 
         input.close();
     }
 }
+
