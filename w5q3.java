@@ -5,15 +5,16 @@ public class w5q3
     
     int i=1;
     int sum=0;
-    do{
+    do
         sum+=i*i;
         i++;
         
     
     
     
-    }
+    
     while (i<=10);
+    }
     
     System.out.println("The sum of square of first 10 natual numbers is:"+sum);
     
